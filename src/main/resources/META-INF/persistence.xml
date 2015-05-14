@@ -5,11 +5,12 @@
 	<persistence-unit name="appVaadinUnit"
 		transaction-type="RESOURCE_LOCAL">
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
-		<non-jta-data-source>java:/comp/env/jdbc/MysqlDS</non-jta-data-source>
+		<non-jta-data-source>java:jboss/datasources/teste</non-jta-data-source>
 		<properties>
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
 			<property name="hibernate.show_sql" value="true" />
-			<property name="hibernate.hbm2ddl.auto" value="update" />
+<!-- 			<property name="hibernate.hbm2ddl.auto" value="update" /> -->
+			<property name="hibernate.hbm2ddl.auto" value="create" />
 			<property name="hibernate.connection.charSet" value="UTF-8" />
 		</properties>
 	</persistence-unit>
